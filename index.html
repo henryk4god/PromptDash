@@ -12,6 +12,7 @@
         <header class="header">
             <div class="header__logo">Prompt Library Dashboard</div>
             <nav class="header__nav">
+                <button class="header__button" id="admin-button">Admin</button>
                 <button class="header__button" id="support-button">Support</button>
             </nav>
         </header>
@@ -35,9 +36,31 @@
                     <iframe class="app-view__iframe" id="app-iframe" src=""></iframe>
                 </div>
             </div>
+
+            <!-- Premium Access Modal -->
+            <div class="premium-modal" id="premium-modal">
+                <div class="premium-modal__content">
+                    <div class="premium-modal__header">
+                        <h2 class="premium-modal__title">Premium Access Required</h2>
+                        <button class="premium-modal__close" id="close-premium">&times;</button>
+                    </div>
+                    <p class="premium-modal__text">
+                        This is a premium feature. Please enter your access code or contact support to purchase access.
+                    </p>
+                    <div class="premium-modal__form">
+                        <input type="text" class="premium-modal__input" id="access-code-input" placeholder="Enter access code">
+                        <button class="premium-modal__submit" id="submit-code">Submit Code</button>
+                    </div>
+                    <div class="premium-modal__message" id="premium-message"></div>
+                    <div class="premium-modal__footer">
+                        <p>Don't have a code? <a href="#" id="get-premium-link">Get Premium Access</a></p>
+                    </div>
+                </div>
+            </div>
         </main>
     </div>
     
+    <!-- Support Modal -->
     <div class="support-modal" id="support-modal">
         <div class="support-modal__content">
             <div class="support-modal__header">
@@ -63,6 +86,39 @@
             <p class="support-modal__text">
                 After payment, contact us on WhatsApp with your transaction ID to receive your premium access code.
             </p>
+        </div>
+    </div>
+
+    <!-- Admin Modal -->
+    <div class="admin-modal" id="admin-modal">
+        <div class="admin-modal__content">
+            <div class="admin-modal__header">
+                <h2 class="admin-modal__title">Admin Panel</h2>
+                <button class="admin-modal__close" id="close-admin">&times;</button>
+            </div>
+            
+            <div class="admin-modal__section">
+                <h3 class="admin-modal__subtitle">Generate Premium Codes</h3>
+                <div class="admin-modal__form">
+                    <input type="text" class="admin-modal__input" id="admin-password" placeholder="Admin Password">
+                    <button class="admin-modal__button" id="generate-codes">Generate New Codes</button>
+                </div>
+                <div class="admin-modal__codes" id="generated-codes"></div>
+            </div>
+
+            <div class="admin-modal__section">
+                <h3 class="admin-modal__subtitle">App Management</h3>
+                <div class="admin-modal__apps" id="admin-apps-list">
+                    <!-- Apps will be listed here for management -->
+                </div>
+            </div>
+
+            <div class="admin-modal__section">
+                <h3 class="admin-modal__subtitle">Valid Premium Codes</h3>
+                <div class="admin-modal__valid-codes" id="valid-codes-list">
+                    <!-- Valid codes will be listed here -->
+                </div>
+            </div>
         </div>
     </div>
 
