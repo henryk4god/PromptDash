@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt Library Dashboard</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+</head>
+<body>
+    <div class="dashboard">
+        <header class="header">
+            <div class="header__logo">Prompt Library Dashboard</div>
+            <nav class="header__nav">
+                <button class="header__button" id="support-button">Support</button>
+            </nav>
+        </header>
+        
+        <main class="main">
+            <div class="dashboard-view" id="dashboard-view">
+                <!-- App cards will be generated here -->
+            </div>
+            
+            <div class="app-view" id="app-view">
+                <div class="app-view__header">
+                    <button class="app-view__back" id="back-button">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19 12H5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12 19L5 12L12 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <h1 class="app-view__title" id="app-title">App Title</h1>
+                </div>
+                <div class="app-view__container">
+                    <iframe class="app-view__iframe" id="app-iframe" src=""></iframe>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <div class="support-modal" id="support-modal">
+        <div class="support-modal__content">
+            <div class="support-modal__header">
+                <h2 class="support-modal__title">Support & Payment</h2>
+                <button class="support-modal__close" id="close-support">&times;</button>
+            </div>
+            <p class="support-modal__text">
+                For premium access or any support issues, please contact us or make a payment using the details below.
+            </p>
+            <div class="support-modal__payment">
+                <h3 class="support-modal__payment-title">Bank Details</h3>
+                <div class="support-modal__payment-details">
+                    <div class="support-modal__account-info">
+                        <div><strong>Account Number:</strong> 2023268027</div>
+                        <div><strong>Bank:</strong> UBA</div>
+                        <div><strong>Account Name:</strong> Henry Lucky</div>
+                        <div><strong>WhatsApp:</strong> +2348033867642</div>
+                    </div>
+                    <button class="support-modal__copy" id="copy-button">Copy Details</button>
+                </div>
+                <div class="support-modal__success" id="copy-success">Copied to clipboard!</div>
+            </div>
+            <p class="support-modal__text">
+                After payment, contact us on WhatsApp with your transaction ID to receive your premium access code.
+            </p>
+        </div>
+    </div>
+
+    <script src="assets/main.js"></script>
+</body>
+</html>
